@@ -1,0 +1,17 @@
+{
+  "extends": "mf-transpiler-configurations/global/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "baseUrl": "./",
+    "declarationDir": "types"
+  },
+  "include": [
+    "./src",
+    "./src/**/*",    
+    "types/custom.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "tests"
+  ]
+}

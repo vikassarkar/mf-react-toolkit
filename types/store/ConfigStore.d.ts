@@ -1,0 +1,31 @@
+import { StoragePersistance } from './StorePersistance';
+export declare class ConfigStore {
+    store: any;
+    appServices: any;
+    persistStore: boolean;
+    enableDevTool: boolean;
+    sessionStore: StoragePersistance;
+    appReducers: {};
+    allReducer: (state: any, action: any) => any;
+    storeInitialState: {};
+    appStateLogicsArr: any[];
+    reduxLogicMiddleware: any;
+    allMiddlewares: any[];
+    enhancer: any;
+    constructor(appServices: any, sessionId?: string, persistStore?: boolean, enableDevTool?: boolean);
+    initStore(): any;
+    resetAndHydrateStore(): void;
+    combineLogics(stateLogics: any): any[];
+    combineReducers(): (state: any, action: any) => any;
+    getSliceNextState(action: any, key: string, previousStateForKey: any, sliceName: string, reducer: any): any;
+    getErrorState(action: any, key: string, previousStateForKey: any, reducer: any): any;
+    getStoreInitialState(allReducer: any): {};
+    getAllReducers(apiRefs: any): {};
+    getAllStateLogics(apiRefs: any): any[];
+    getAvailableActions(appName: any): any;
+    getAvailableConstant(appName: string): any;
+    getAvailableService(appName: string): any;
+    getAvailableApi(appName: string): any;
+    getUrlQueryValue(key: string): string;
+    objectValues: (obj: object) => any[];
+}
