@@ -1,6 +1,6 @@
 {
   "name": "mf-react-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "common utility for react micro-frontend and mono-repo projects",
   "main": "src/index.ts",
   "types": "types/index.d.ts",
